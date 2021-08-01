@@ -13,7 +13,6 @@ const RepositoriesList: React.FC = () => {
   const {data, error, loading} = useTypedSelector((state) => state.repositories);
 
   
-
   const onSubmit = (event: React.FormEvent<HTMLFormElement>)   => {
     event.preventDefault()
     searchRepositories(term);
@@ -27,11 +26,7 @@ const RepositoriesList: React.FC = () => {
       </form>
       {error && <h3>{error}</h3>}
       {loading && <h3>loading...</h3>}
-      {!error && !loading &&
-        
-        data.map(name => <div key={name}>{name }</div>)
-      
-      }
+      {!error && !loading && <p>{data}</p>}
     </div>
   )
 }

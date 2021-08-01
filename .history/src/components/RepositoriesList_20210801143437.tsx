@@ -29,7 +29,7 @@ const RepositoriesList: React.FC = () => {
       {loading && <h3>loading...</h3>}
       {!error && !loading &&
         
-        data.map(name => <div key={name}>{name }</div>)
+        data
       
       }
     </div>
