@@ -1,0 +1,21 @@
+import {} from '../'
+
+interface SearchRepositoriesAction {
+  type: ActionType.SEARCH_REPOSITORIES;
+}
+
+interface SearchRepositoriesSuccessAction {
+  type: ActionType.SEARCH_REPOSITORIES_SUCCESS;
+  payload: string[];
+}
+
+interface SearchRepositoriesErrorAction {
+  type: ActionType.SEARCH_REPOSITORIES_ERRORS;
+  payload: string;
+}
+
+type Action =
+  |  SearchRepositoriesAction
+  | SearchRepositoriesSuccessAction
+  | SearchRepositoriesErrorAction 
+
