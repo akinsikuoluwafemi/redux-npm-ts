@@ -9,5 +9,5 @@ const reducers = combineReducers({
 
 export default reducers;
 
-// makes react-redux know about our store
+// 
 export type RootState = ReturnType<typeof reducers>
